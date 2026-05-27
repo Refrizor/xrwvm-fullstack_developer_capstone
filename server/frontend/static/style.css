@@ -5,7 +5,7 @@ img{
 
 .card{
   border: rgb(103, 102, 105) 3px solid;
-  display: flex;  
+  display: flex;
   flex-direction: column;
   margin-left:5%;
   margin-right:5%;
@@ -14,7 +14,7 @@ img{
 }
 
 .row{
-  display: flex;  
+  display: flex;
   flex: 1;
   flex-direction: row;
   margin: auto;
@@ -122,5 +122,42 @@ img{
     color:#FFF;
     border-radius:50px;
     text-align:center;
-    box-shadow: 2px 2px 3px #999;  
+    box-shadow: 2px 2px 3px #999;
 }
+
+.contact__banner {
+  width: 18rem;
+  height: 10rem;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-layout h1 {
+  text-align: center;
+  margin: 1rem 0 1.5rem;
+}
+
+.contact__list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact__list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact__item {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
