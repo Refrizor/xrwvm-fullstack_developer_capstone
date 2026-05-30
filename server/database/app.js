@@ -12,7 +12,7 @@ app.use(require('body-parser').urlencoded({extended: false}));
 const reviews_data = JSON.parse(fs.readFileSync("reviews.json", 'utf8'));
 const dealerships_data = JSON.parse(fs.readFileSync("dealerships.json", 'utf8'));
 
-await mongoose.connect("mongodb://mongo_db:27017/", {'dbName': 'dealershipsDB'});
+connectToDatabase();
 
 const Reviews = require('./review');
 
@@ -118,3 +118,9 @@ app.post('/insert_review', express.raw({type: '*/*'}), async (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
+
+async function connectToDatabase() {
+    await mongoose.connect("mongodb://mongo_db:27017/", {
+        dbName: "dealershipsDB",
+    });
+}
